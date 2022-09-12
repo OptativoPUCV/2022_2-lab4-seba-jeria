@@ -2,3 +2,38 @@ Mon 12 Sep 2022 12:28:53 AM UTC:
  tests:  0|6
 total_score: 0/70
 a95b208
+Mon 12 Sep 2022 12:33:42 AM UTC: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:3: error: unknown type name ‘HaspMap’; did you mean ‘HashMap’?
+   55 |   HaspMap* M = (HaspMap*)malloc(sizeof(HaspMap)*capacity);
+      |   ^~~~~~~
+      |   HashMap
+hashmap.c:55:17: error: ‘HaspMap’ undeclared (first use in this function); did you mean ‘HashMap’?
+   55 |   HaspMap* M = (HaspMap*)malloc(sizeof(HaspMap)*capacity);
+      |                 ^~~~~~~
+      |                 HashMap
+hashmap.c:55:17: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:25: error: expected expression before ‘)’ token
+   55 |   HaspMap* M = (HaspMap*)malloc(sizeof(HaspMap)*capacity);
+      |                         ^
+hashmap.c:56:4: error: request for member ‘buckets’ in something not a structure or union
+   56 |   M->buckets = (Pair**)calloc(capacity,sizeof(Pair*));
+      |    ^~
+hashmap.c:57:4: error: request for member ‘capacity’ in something not a structure or union
+   57 |   M->capacity = capacity;
+      |    ^~
+hashmap.c:58:4: error: request for member ‘size’ in something not a structure or union
+   58 |   M->size = 0;
+      |    ^~
+hashmap.c:59:4: error: request for member ‘current’ in something not a structure or union
+   59 |   M->current = -1;
+      |    ^~
+hashmap.c:60:10: error: returning ‘int *’ from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   60 |   return M;
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+cead041
