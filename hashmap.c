@@ -116,6 +116,16 @@ return p;
 }
 
 Pair * nextMap(HashMap * map) {
-  
-  return ;
+  Pair* p = (Pair *)malloc(sizeof(Pair));
+  int i;
+  for(i=map->current+1;i < map->capacity;i++){
+    if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+      p=map->buckets[i];
+      break;
+    }
+  }
+  if(i==map->capacity)
+      p=NULL;
+  map->current = i;
+  return p;
 }
