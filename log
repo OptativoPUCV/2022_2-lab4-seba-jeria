@@ -192,3 +192,24 @@ Mon 12 Sep 2022 12:50:47 AM UTC:
  tests:  11|2
 total_score: 50/70
 d4ab1f6
+Mon 12 Sep 2022 01:03:26 AM UTC: 
+ hashmap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:116:3: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  116 |   return ;
+      |   ^~~~~~
+hashmap.c:114:8: note: declared here
+  114 | Pair * nextMap(HashMap * map) {
+      |        ^~~~~~~
+hashmap.c: In function ‘firstMap’:
+hashmap.c:112:1: error: control reaches end of non-void function [-Werror=return-type]
+  112 | }
+      | ^
+hashmap.c:108:7: error: ‘p’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  108 |     if(p!=NULL){
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+47a358e

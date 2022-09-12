@@ -103,11 +103,15 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+  Pair* p;
+  for (int i=0;i<map->capacity;i++){
+    if(p!=NULL){
+      return p->value;
+    }
+  }
 }
 
 Pair * nextMap(HashMap * map) {
-
-    return NULL;
+  
+  return ;
 }
