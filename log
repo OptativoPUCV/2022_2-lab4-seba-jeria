@@ -72,3 +72,9 @@ hashmap.c:60:10: error: returning ‘int *’ from a function with incompatible 
 cc1: all warnings being treated as errors
 Compilation failed
 86ce4da
+Mon 12 Sep 2022 12:34:23 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+315384a
