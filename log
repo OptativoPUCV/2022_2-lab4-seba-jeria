@@ -249,3 +249,9 @@ Tue 27 Sep 2022 08:33:41 PM UTC:
  tests:  16|1
 total_score: 60/70
 b5ab987
+Tue 27 Sep 2022 08:34:15 PM UTC: 
+ hashmap.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+3fecec7
